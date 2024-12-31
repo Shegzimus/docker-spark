@@ -1,0 +1,13 @@
+services:
+  spark:
+    build:
+      dockerfile: Dockerfile
+    container_name: practice-spark
+    volumes:
+      - ./work_dir:/work_dir:rw
+    ports:
+      - 8888:8888
+      - 4040:4040
+      - 7077:7077
+    stdin_open: true
+    tty: true
